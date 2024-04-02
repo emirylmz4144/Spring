@@ -1,4 +1,4 @@
-package ExampleOf_Depend_DependInject.step05;
+package ExampleOf_Depend_DependInject.step05_UseOfFactories;
 
 
 
