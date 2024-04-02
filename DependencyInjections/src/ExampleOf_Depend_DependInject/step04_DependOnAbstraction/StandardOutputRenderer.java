@@ -1,4 +1,4 @@
-package ExampleOf_Depend_DependInject.step04;
+package ExampleOf_Depend_DependInject.step04_DependOnAbstraction;
 
 public class StandardOutputRenderer implements GreetingRenderer{
 	private GreetingProvider greetinngProvider = null;

@@ -1,4 +1,4 @@
-package ExampleOf_Depend_DependInject.step04;
+package ExampleOf_Depend_DependInject.step04_DependOnAbstraction;
 /**
  *Interface'i bağımlılık olarak almış ve türeyecek olan sınıflara bağımlılktan kurtulmuştur
  * tek yapması gereken kendisine gelecek olan mesajı kendisine ait render provider'ı kendi formatı ile yazmaktır.

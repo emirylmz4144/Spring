@@ -1,4 +1,4 @@
-package ExampleOf_Depend_DependInject.step04;
+package ExampleOf_Depend_DependInject.step04_DependOnAbstraction;
 
 /**
  * Kendisinden imza alacak sınıflara sorumluluklarını bildirir
