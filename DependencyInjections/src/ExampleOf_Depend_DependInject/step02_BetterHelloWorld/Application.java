@@ -1,4 +1,4 @@
-package ExampleOf_Depend_DependInject.step02;
+package ExampleOf_Depend_DependInject.step02_BetterHelloWorld;
 
 public class Application {
 	/**
