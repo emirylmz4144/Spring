@@ -1,4 +1,4 @@
-package ExampleOf_Depend_DependInject.step01;
+package ExampleOf_Depend_DependInject.step01_CassicalHelloWorld;
 
 public class Application {
 
