@@ -1,4 +1,4 @@
-package ExampleOf_Depend_DependInject.step03;
+package ExampleOf_Depend_DependInject.step03_SeperatingResponsibilities;
 
 public class Application {
 
