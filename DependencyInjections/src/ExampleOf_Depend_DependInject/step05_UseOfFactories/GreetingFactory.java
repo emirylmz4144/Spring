@@ -33,7 +33,7 @@ public class GreetingFactory implements Factory{
         {
             try {
                 //Propertylerin olduğu dosya yolu
-                properties.load(new FileInputStream("src/ExampleOf_Depend_DependInject/step05/resourcesFile/applications.properties"));
+                properties.load(new FileInputStream("src/ExampleOf_Depend_DependInject/step05_UseOfFactories/resourcesFile/applications.properties"));
                 String [] pathOfRendererList=
                         {
                                 //propertyleri(renderer) aldı
