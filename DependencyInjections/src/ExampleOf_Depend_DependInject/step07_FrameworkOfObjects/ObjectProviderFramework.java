@@ -3,6 +3,10 @@ package ExampleOf_Depend_DependInject.step07_FrameworkOfObjects;
 import ExampleOf_Depend_DependInject.step06_FrameworkOfFactories.GreetingProviderLanguages.*;
 import ExampleOf_Depend_DependInject.step06_FrameworkOfFactories.GreetingRendererTypes.*;
 
+/**
+ * Bu class şimdilik spring frameworkün yerinin tutmaktadır bir sonraki adımda bu class yerinde
+ * beans.xml konfigürasyonu ile gerçekten spring kullanacağız.
+ */
 public class ObjectProviderFramework {
 
 	private GreetingRenderer renderer;
