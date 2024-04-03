@@ -23,6 +23,12 @@ import ExampleOf_Depend_DependInject.step06_FrameworkOfFactories.GreetingRendere
  *  Fakat biraz daha inceleme yapacak olursak bu seferde soyut bir interface olan GreetingProvider ve GreetingRenderer'da
  *  var olan render işlemi ve nesnenin bu render işlemine gönderilmesine bağımlıyız
  *
+ *  Yani biz objelere bağımlıyız şu an çünkü metotlara o şekilde bağlanacağız ee onu da başka bir şey yapsa ya
+ *  her şeyi başkası yaptı(Application değil başka sınıf işte o sınıfa biz framework dedik)
+ *  bunu da başkası yapsın
+ *
+ *  :)))
+ *
  *  -->step07
  *
  */
