@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- Sınıfımızı bean'e hapsettik ve property yani setterDI yapısı ile(bunlar çeşitlilik
+    gösterecek) artık DI ile bean(fasülyeleştirdik) haline getirdik
+    -->
+    <bean id="renderer"
+          class="GreetingRendererTypes.ErrorOutputRenderer">
+        <property name="greetingProvider" ref="provider"/>
+    </bean>
+    <!--
+     wiring işlemi (setter (telle bağlama)) için ve setterDI için bir property(uygulamamız bunu gerektiriyor)
+    -->
+    <bean id="provider"
+          class="GreetingProviderLanguages.RussianGreetingProvider"/>
+
+</beans>

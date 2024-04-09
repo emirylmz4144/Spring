@@ -48,13 +48,13 @@ public class Application {
 
 
 
-		renderer = (GreetingRenderer) framework.getObject("org.javaturk.spring.di.ch02.greeting06.ErrorOutputRenderer");
-		provider = (GreetingProvider) framework.getObject("org.javaturk.spring.di.ch02.greeting06.SelamGreetingProvider");
+		renderer = (GreetingRenderer) framework.getObject("DependencyInjections/src/ExampleOf_Depend_DependInject/step06_FrameworkOfFactories/GreetingRendererTypes/ErrorOutputRenderer");
+		provider = (GreetingProvider) framework.getObject("DependencyInjections/src/ExampleOf_Depend_DependInject/step06_FrameworkOfFactories/GreetingProviderLanguages/EnglishGreetingProvider");
 		
 		renderer.setGreetingProvider(provider);
 		renderer.render();
 		
-		provider = (GreetingProvider) framework.getObject("org.javaturk.spring.di.ch02.greeting06.ArabicGreetingProvider");
+		provider = (GreetingProvider) framework.getObject("DependencyInjections/src/ExampleOf_Depend_DependInject/step06_FrameworkOfFactories/GreetingProviderLanguages/GermanGreetingProvider");
 		
 		renderer.setGreetingProvider(provider);
 		renderer.render();
