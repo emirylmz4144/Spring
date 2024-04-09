@@ -8,7 +8,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Yani Spring
  *       -Dünyadaki en büyük Factory
  *       -Dünyadaki en büyük DI yönetimi
- *       -Objeleri oluşturup dependencyleri yönetmenin en temel yoludur 
+ *       -Objeleri oluşturup dependencyleri yönetmenin en temel yoludur
+ *
+ *       --External Libraries: Spring framework (manuel not maven) tabii ileride maven ile
+ *       kurulum yapacağız
  *
  */
 public class Main {
