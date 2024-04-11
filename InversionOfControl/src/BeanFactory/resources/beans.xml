@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--Bir bean'i birden fazla şekilde isimlendirip (id'ye lakap takma) çağırabiliriz-->
+    <bean id="beanA" name="bean_A, bean_a, BEAN_A BEAN-A"
+          class="BeanFactory.Classes.BeanA">
+        <property name="beanB" ref="beanB" />
+    </bean>
+
+    <!--Daha sonradan da bir bean'a lakap takabiliriz-->
+    <alias name="beanA" alias="a" />
+    <alias name="beanA" alias="aa" />
+
+    <bean id="beanB" class="BeanFactory.Classes.BeanB">
+        <property name="beanC" ref="beanC" />
+    </bean>
+
+    <bean id="beanB2" class="BeanFactory.Classes.BeanB"/>
+    <bean id="beanC" class="BeanFactory.Classes.BeanC"/>
+
+    <bean id="beanA2" class="BeanFactory.Classes.BeanA">
+        <property name="beanB" ref="beanB" />
+    </bean>
+
+</beans>
