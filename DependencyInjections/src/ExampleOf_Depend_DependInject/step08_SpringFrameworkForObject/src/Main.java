@@ -21,5 +21,15 @@ public class Main {
         //Wiring(bir önceki derste burada yer alan yapı (setter)) işlemi beanlerde(property olarak(setterDI)) yapıldı.
         renderer.render();
 
+
+        /*WİRİNG İŞLEMİNİ SPRİNGİN YAPTIĞINI DAHA İYİ ANLAMAN İÇİN AŞAĞIDAKİ ALTERNATİF YOLA BAK
+        *
+        *  IGreetingRenderer renderer=(IGreetingRenderer) factory.getBean("renderer");
+        *  IGreetingProvider provider=(IGreetingProvider) factory.getBean("provider");
+        *  renderer.setGreetingProvider(provider);
+        *  renderer.render();
+        * 
+        * */
+
     }
 }
