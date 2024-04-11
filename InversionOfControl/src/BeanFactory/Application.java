@@ -1,3 +1,5 @@
+package BeanFactory;
+
 import BeanFactory.Classes.BeanA;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
