@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="beanA" name="bean_A, bean_a, BEAN_A BEAN-A"
+		class="SomeOfMainObjectTraining.Classes.BeanA">
+		<property name="beanB" ref="beanB" />
+	</bean>
+
+	<alias name="beanA" alias="a" />
+	<alias name="beanA" alias="aa" />
+
+<!--Bu beansin eklenmesi iki tane aynı id'ye sahip
+bean oluşturacağından projenin patlamasına sebebiyet verir
+	<bean id="beanB" class="SomeOfMainObjectTraining.Classes.BeanB">
+		<property name="beanC" ref="beanC" />
+	</bean>
+	-->
+	
+     <bean id="beanB" class="SomeOfMainObjectTraining.Classes.BeanB"/>
+
+
+
+	<bean id="beanC" class="SomeOfMainObjectTraining.Classes.BeanC">
+	</bean>
+
+	<bean id="beanA2" class="SomeOfMainObjectTraining.Classes.BeanA">
+		<property name="beanB" ref="beanB" />
+	</bean>
+
+	<bean id="5-beanA*"
+		class="SomeOfMainObjectTraining.Classes.BeanA">
+		<property name="beanB" ref="beanB" />
+	</bean>
+
+</beans>

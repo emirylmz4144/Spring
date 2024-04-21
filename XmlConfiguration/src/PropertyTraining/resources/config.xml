@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       ">
+
+    <!--Sınıf içindeki bir sınıfı nesne alan bean'e aldığı sınıfı bean olarak tanımlayıp property olarak gönderebilirz-->
+    <bean id="customerService" class="PropertyTraining.CustomerService">
+        <property name="customerDAL" ref="mySqlCustomerDAL"/>
+    </bean>
+
+    <!--Sınıfın içindeki değişkenlere'de injection yapabiliriz-->
+    <bean id="mySqlCustomerDAL" class="PropertyTraining.MySqlCustomerDAL">
+        <property name="connectionString" value="mysql connection string bağlantısı"/>
+    </bean>
+
+    <bean id="postgresqlCustomerDal" class="PropertyTraining.PostgreSqlCustomerDal">
+        <property name="connectionString" value="postgresql connection string bağlantısı"/>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--
+    Şunu eklemeyi unutma
+    xmlns:context="http://www.springframework.org/schema/context"
+    http://www.springframework.org/schema/context
+    https://www.springframework.org/schema/context/spring-context.xsd
+    -->
+
+
+    <context:property-placeholder location="PropertiesFileTraining/resources/application.properties"/>
+
+    <bean id="customerService" class="PropertiesFileTraining.CustomerService">
+        <property name="customerDAL" ref="postgreSqlCustomerDAL"/>
+    </bean>
+
+    <!--
+    Böylece konfigürasyon dosyalarında sürekli olarak uzun database bağlantılarını her databasei
+    kullanan sınıfa yazmaz veya başka database'e geçilince uzun kısmı yazmayız ve kod tekrarından kurtuluruz
+    (database sadece bir örnek büyük projelerde daha farklı şeylerde yapılır)
+    -->
+    <bean id="mySqlCustomerDal" class="PropertiesFileTraining.MySqlCustomerDAL">
+        <property name="connectionString" value="${database.mysql}"/>
+    </bean>
+
+    <bean id="postgreSqlCustomerDAL" class="PropertiesFileTraining.PostgreSqlCustomerDal">
+        <property name="connectionString" value="${database.postgre}"/>
+    </bean>
+
+</beans>
