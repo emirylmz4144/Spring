@@ -51,7 +51,7 @@ public class IdNameAndAliasExample1 {
      */
 
     /**
-     * Remove last inner <beans/> for this.
+     * Aliaslara göre bean getirme fonksiyonu
      * @param context
      */
     private static void callAliasExamples(ApplicationContext context) {
