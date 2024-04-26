@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="classpath:IdNameAndAliasTraining/resources/anotherBeans.xml"/>
+	<bean id="beanA1" name="aBean" class="IdNameAndAliasTraining.ClassesOfBeans.BeanA">
+		<property name="beanB" ref="beanB1" />
+	</bean>
+
+	<alias name="beanA1" alias="aaBean"/>
+
+	<bean id="beanB1" name="bBean" class="IdNameAndAliasTraining.ClassesOfBeans.BeanB">
+		<property name="beanC" ref="beanC1" />
+	</bean>
+
+	<bean id="beanC1"  name="cBean" class="IdNameAndAliasTraining.ClassesOfBeans.BeanC" />
+
+
+	<bean id="beanA3" class="IdNameAndAliasTraining.ClassesOfBeans.BeanA">
+		<property name="beanB" ref="beanB1" />
+	</bean>
+	
+	<bean class="IdNameAndAliasTraining.ClassesOfBeans.BeanA" />
+
+
+
+</beans>
