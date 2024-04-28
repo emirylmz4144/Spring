@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-lazy-init="true">
+
+	<import resource="beans.xml" />
+	
+	<bean id="constructor1"
+		class="CollectionBeanInjectionTraining.CollectionBean">
+		<constructor-arg>
+			<array>
+				<ref bean="beanA" />
+				<ref bean="beanA2" />
+				<ref bean="5-beanA*" />
+			</array>
+		</constructor-arg>
+
+		<constructor-arg>
+			<list>
+				<ref bean="beanB" />
+			</list>
+		</constructor-arg>
+
+		<constructor-arg>
+			<set>
+				<ref bean="beanC" />
+			</set>
+		</constructor-arg>
+
+		<constructor-arg>
+			<map>
+				<entry key="1" value-ref="beanA" />
+				<entry key="10" value-ref="beanA2" />
+				<entry key="100" value-ref="5-beanA*" />
+			</map>
+		</constructor-arg>
+
+		<constructor-arg>
+			<map>
+				<entry key="1">
+					<ref bean="beanA" />
+				</entry>
+				<entry key="10">
+					<ref bean="beanA2" />
+				</entry>
+				<entry key="100">
+					<ref bean="5-beanA*" />
+				</entry>
+			</map>
+		</constructor-arg>
+
+		<constructor-arg>
+			<map>
+				<entry key-ref="beanA">
+					<ref bean="beanB" />
+				</entry>
+				<entry key-ref="beanA2">
+					<ref bean="beanB2" />
+				</entry>
+				<entry value-ref="beanB2">
+					<key>
+						<null />
+					</key>
+				</entry>
+				<entry value-ref="beanB2">
+					<key>
+						<ref bean="beanA" />
+					</key>
+				</entry>
+				<entry>
+					<key>
+						<null />
+					</key>
+					<null />
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+</beans>
