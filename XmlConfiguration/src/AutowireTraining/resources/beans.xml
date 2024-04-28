@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans	
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!--Constructor-arg girerek dependency'yi manuel eklemek yerine autowire ile constructorda olan dependency'yi otomotik ekler
+	tabii şunu unutmamak gerekir ki önce o sınıfa gidecek constructor'a bakacak oradaki nesne tipinin constructor'a inject edilmiş hali
+	olan nesnenin instance'ı ile aynı tipteki bean'i burada arayacak ve bulup buradaki bean'i otomotik olarak oraya inject edecek
+	aksi takdirde yani gideceği consturctor'daki tipi burada bean olarak bulamazsa hata verir-->
+	<bean id="renderer1" autowire="constructor"
+		class="AutowireTraining.Classes.ErrorOutputRenderer">
+		<!-- No need for this -->
+		<!-- <constructor-arg name="greetingProvider" -->
+		<!-- ref="greetingProvider" /> -->
+	</bean>
+
+
+	<!--setter injection'da yapılan işlemi burada otomotik olarak yapar yani property kullanmamıza gerek kalmaz fakat şunu unutmamak gerekirki
+	yine bu tanımlı olan bean'in sınıfına gider bağımlı olduğu nesneye verilen adın setter'ını arar (a->getA, b->getB şeklinde) yalnız ve yalnız
+	bağımlı olduğu nesneye uygun şekilde setter bulursa o uygun setter'a ait nesnenin bean'inin burada arar ve inject eder-->
+	<bean id="renderer2" autowire="byName"
+		class="AutowireTraining.Classes.StandardOutputRenderer">
+	</bean>
+
+	<!--Yukarıdaki tanımın aynısını yapar fakat tek fark bu sefer setter injectiona göre (yani nesne a ise metot ismi getA olması) gerekmez
+	gittiği sınıfta bağımlı olunan nesnenin tipi her ne ise ona göre burada o nesneye ait herhangi bir bean arayarak inject eder
+	yani gittiği sınıfta bağımlı olunan nesneye ait inject edinen herhangi bir metot bulur ve otomotik olarak inject eder aradaki tek fark budur-->
+	<bean id="renderer3" autowire="byType"
+		class="AutowireTraining.Classes.StandardOutputRenderer">
+	</bean>
+
+	<bean id="greetingProvider" 
+		class="AutowireTraining.Classes.HelloWorldGreetingProvider" />
+</beans>
