@@ -1,4 +1,4 @@
-package InheritenceOfXmlConfiguration.Classes;
+package InheritenceOfXmlConfigurationTraining.Classes;
 
 public class ChildOfAbstractParent extends AbstractParent {
 	protected double d;

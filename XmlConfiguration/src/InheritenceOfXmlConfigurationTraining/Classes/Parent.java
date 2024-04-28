@@ -1,4 +1,4 @@
-package InheritenceOfXmlConfiguration.Classes;
+package InheritenceOfXmlConfigurationTraining.Classes;
 
 public class Parent {
 	protected int i;

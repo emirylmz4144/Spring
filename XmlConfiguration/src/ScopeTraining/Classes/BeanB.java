@@ -1,4 +1,4 @@
-package InheritenceOfXmlConfiguration.Classes;
+package ScopeTraining.Classes;
 
 public class BeanB {
 

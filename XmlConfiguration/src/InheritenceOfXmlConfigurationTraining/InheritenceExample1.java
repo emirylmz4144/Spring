@@ -1,7 +1,7 @@
-package InheritenceOfXmlConfiguration;
+package InheritenceOfXmlConfigurationTraining;
 
-import InheritenceOfXmlConfiguration.Classes.Child;
-import InheritenceOfXmlConfiguration.Classes.Parent;
+import InheritenceOfXmlConfigurationTraining.Classes.Child;
+import InheritenceOfXmlConfigurationTraining.Classes.Parent;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -9,7 +9,7 @@ public class InheritenceExample1
 {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext(
-                "InheritenceOfXmlConfiguration/resources/beans.xml");
+                "InheritenceOfXmlConfigurationTraining/resources/beans.xml");
 
         Parent parent = (Parent) context.getBean("parent");
         System.out.println("parent: " + parent);

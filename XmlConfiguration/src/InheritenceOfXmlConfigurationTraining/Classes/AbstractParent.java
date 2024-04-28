@@ -1,4 +1,4 @@
-package InheritenceOfXmlConfiguration.Classes;
+package InheritenceOfXmlConfigurationTraining.Classes;
 
 public abstract class AbstractParent {
 	protected int i;

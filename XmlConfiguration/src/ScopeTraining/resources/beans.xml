@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--Bu bean tek sefer üretilir ve her çağrıldığında oluşturulmuş tek nesne gönderilir ve ayrıca singleton default IoC seçimidir-->
+	<bean id="beanA" scope="singleton" class="ScopeTraining.Classes.BeanA">
+		<property name="beanB" ref="beanB" />
+	</bean>
+	
+	
+	<bean id="beanB" class="ScopeTraining.Classes.BeanB">
+		<property name="beanC" ref="beanC" />
+	</bean>
+
+	<bean id="beanC" scope="prototype" class="ScopeTraining.Classes.BeanC"/>
+
+
+	<!--Bu durumda isse her çağrıldığında yeni bir nesne üretir-->
+	<bean id="beanAA" scope="prototype" class="ScopeTraining.Classes.BeanA">
+		<property name="beanB" ref="beanB"/>
+	</bean>
+	
+</beans>

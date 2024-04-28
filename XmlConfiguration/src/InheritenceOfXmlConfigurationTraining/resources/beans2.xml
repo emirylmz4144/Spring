@@ -5,36 +5,36 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--Böylece classımızın abstract olduğunu belirterek IoC conteiner'ın bu bean'in intansce'ını oluşturmaması gerektiğini bildirdik.-->
-    <bean id="abstractParent" abstract="true" class="InheritenceOfXmlConfiguration.Classes.AbstractParent">
+    <bean id="abstractParent" abstract="true" class="InheritenceOfXmlConfigurationTraining.Classes.AbstractParent">
         <property name="i" value="7" />
         <property name="b" value="true" />
         <property name="s" value="Spring :)" />
         <property name="beanA" ref="beanA" />
     </bean>
 
-    <bean id="child1" class="InheritenceOfXmlConfiguration.Classes.ChildOfAbstractParent">
+    <bean id="child1" class="InheritenceOfXmlConfigurationTraining.Classes.ChildOfAbstractParent">
         <property name="d" value="3.14" />
         <property name="beanB" ref="beanB" />
     </bean>
 
-    <bean id="child2" parent="abstractParent" class="InheritenceOfXmlConfiguration.Classes.ChildOfAbstractParent">
+    <bean id="child2" parent="abstractParent" class="InheritenceOfXmlConfigurationTraining.Classes.ChildOfAbstractParent">
         <property name="d" value="6.28" />
         <property name="beanB" ref="beanB" />
     </bean>
 
-    <bean id="child3" parent="abstractParent" class="InheritenceOfXmlConfiguration.Classes.ChildOfAbstractParent">
+    <bean id="child3" parent="abstractParent" class="InheritenceOfXmlConfigurationTraining.Classes.ChildOfAbstractParent">
         <property name="s" value="Spring Boot :)" />
         <property name="d" value="6.28" />
         <property name="beanB" ref="beanB" />
     </bean>
 
-    <bean id="beanA" class="InheritenceOfXmlConfiguration.Classes.BeanA">
+    <bean id="beanA" class="InheritenceOfXmlConfigurationTraining.Classes.BeanA">
         <property name="beanB" ref="beanB" />
     </bean>
 
-    <bean id="beanB" class="InheritenceOfXmlConfiguration.Classes.BeanB">
+    <bean id="beanB" class="InheritenceOfXmlConfigurationTraining.Classes.BeanB">
         <property name="beanC" ref="beanC"/>
     </bean>
 
-    <bean id="beanC" class="InheritenceOfXmlConfiguration.Classes.BeanC" />
+    <bean id="beanC" class="InheritenceOfXmlConfigurationTraining.Classes.BeanC" />
 </beans>

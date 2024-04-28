@@ -1,6 +1,6 @@
-package InheritenceOfXmlConfiguration;
+package InheritenceOfXmlConfigurationTraining;
 
-import InheritenceOfXmlConfiguration.Classes.ChildOfAbstractParent;
+import InheritenceOfXmlConfigurationTraining.Classes.ChildOfAbstractParent;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,7 +8,7 @@ public class InheritenceExample2
 {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext(
-                "InheritenceOfXmlConfiguration/resources/beans2.xml");
+                "InheritenceOfXmlConfigurationTraining/resources/beans2.xml");
 
         // Trying to get the instance of such bean throws org.springframework.beans.factory.BeanIsAbstractException.
 //		AbstractParent parent = (AbstractParent) context.getBean("abstractParent");
