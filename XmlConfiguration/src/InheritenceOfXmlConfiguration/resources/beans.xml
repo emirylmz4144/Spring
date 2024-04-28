@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="parent"
+          class="InheritenceOfXmlConfiguration.Classes.Parent">
+        <property name="i" value="7" />
+        <property name="b" value="true" />
+        <property name="s" value="Spring :)" />
+        <property name="beanA" ref="beanA" />
+    </bean>
+
+    <bean id="child1" class="InheritenceOfXmlConfiguration.Classes.Child">
+        <property name="d" value="6.28" />
+        <property name="beanB" ref="beanB" />
+    </bean>
+
+    <!--Böylece yukarıda bağımlılıkları tanımlanan bean'in (classın değil bean'in) bağımlılıklarını miras alır-->
+    <bean id="child2" parent="parent"
+          class="InheritenceOfXmlConfiguration.Classes.Child">
+        <property name="d" value="6.28" />
+        <property name="beanB" ref="beanB" />
+    </bean>
+
+    <bean id="child3" parent="parent"
+          class="InheritenceOfXmlConfiguration.Classes.Child">
+        <property name="s" value="Spring Boot :)" />
+        <property name="d" value="10.00" />
+        <property name="beanB" ref="beanB" />
+    </bean>
+
+    <bean id="beanA" class="InheritenceOfXmlConfiguration.Classes.BeanA">
+        <property name="beanB" ref="beanB" />
+    </bean>
+
+    <bean id="beanB" class="InheritenceOfXmlConfiguration.Classes.BeanB">
+        <property name="beanC" ref="beanC"></property>
+    </bean>
+
+    <bean id="beanC" class="InheritenceOfXmlConfiguration.Classes.BeanC" />
+</beans>
