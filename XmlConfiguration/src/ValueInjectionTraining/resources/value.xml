@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd" default-lazy-init="true">
+
+	<bean id="constructorWithIndex1"
+		class="ValueInjectionTraining.Classes.ValueBean">
+		<constructor-arg index="0" value="0" />
+		<constructor-arg index="1" value="1" />
+		<constructor-arg index="2" value="3.14" />
+		<constructor-arg index="3" value="true" />
+		<constructor-arg index="4" value="Selam" />
+		<constructor-arg index="5" value="Hello" />
+	</bean>
+
+	<bean id="constructorWithName"
+		class="ValueInjectionTraining.Classes.ValueBean">
+		<constructor-arg name="i" value="0" />
+		<constructor-arg name="j" value="1" />
+		<constructor-arg name="d" value="3.14" />
+		<constructor-arg name="b" value="true" />
+		<constructor-arg name="s1" value="Selam" />
+		<constructor-arg name="s2" value="Hello" />
+	</bean>
+
+	<bean id="constructorWithType"
+		class="ValueInjectionTraining.Classes.ValueBean">
+		<constructor-arg type="int" value="0" />
+		<constructor-arg type="int" value="1" />
+		<constructor-arg type="double" value="3.14" />
+		<constructor-arg type="boolean" value="true" />
+		<constructor-arg type="java.lang.String" value="Selam" />
+		<constructor-arg type="java.lang.String" value="Hello" />
+	</bean>
+	
+		<bean id="constructorWithIndex21"
+		class="ValueInjectionTraining.Classes.ValueBean">
+		<constructor-arg index="0" value="0" />
+		<constructor-arg index="1" value="1" />
+		<constructor-arg index="2" value="3.14" />
+		<constructor-arg index="3" value="true" />
+		<constructor-arg index="4" value="Selam" />
+		<constructor-arg index="5" value="Hello" />
+		<constructor-arg index="6">
+			<array>
+				<value>3</value>
+				<value>5</value>
+				<value>7</value>
+			</array>
+		</constructor-arg>
+	</bean>
+
+	<bean id="constructorWithIndex2"
+		class="ValueInjectionTraining.Classes.ValueBean">
+		<constructor-arg index="0" value="0" />
+		<constructor-arg index="1" value="1" />
+		<constructor-arg index="2" value="3.14" />
+		<constructor-arg index="3" value="true" />
+		<constructor-arg index="4" value="Selam" />
+		<constructor-arg index="5" value="Hello" />
+		<constructor-arg index="6">
+			<list>
+				<value type="java.lang.String">I</value>
+				<value type="java.lang.String">love</value>
+				<value type="java.lang.String">Spring</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="constructorWithIndex3"
+		class="ValueInjectionTraining.Classes.ValueBean">
+		<constructor-arg index="0" value="0" />
+		<constructor-arg index="1" value="1" />
+		<constructor-arg index="2" value="3.14" />
+		<constructor-arg index="3" value="true" />
+		<constructor-arg index="4" value="Selam" />
+		<constructor-arg index="5" value="Hello" />
+		<constructor-arg index="6">
+			<list>
+				<value >I</value>
+				<value>love</value>
+				<value>Spring</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg index="7">
+			<set>
+				<value>1</value>
+				<value>2</value>
+				<value>3</value>
+			</set>
+		</constructor-arg>
+	</bean>
+
+	<bean id="constructorWithIndex4"
+		class="ValueInjectionTraining.Classes.ValueBean">
+		<constructor-arg index="0" value="0" />
+		<constructor-arg index="1" value="1" />
+		<constructor-arg index="2" value="3.14" />
+		<constructor-arg index="3" value="true" />
+		<constructor-arg index="4" value="Selam" />
+		<constructor-arg index="5" value="Hello" />
+		<constructor-arg index="6">
+			<list>
+				<value>I</value>
+				<value>love</value>
+				<value>Spring</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg index="7">
+			<set>
+				<value>1</value>
+				<value>2</value>
+				<value>3</value>
+			</set>
+		</constructor-arg>
+		<constructor-arg index="8">
+			<map>
+				<entry key="1" value="bir" />
+				<entry key="10" value="on" />
+				<entry key="100" value="yuz" />
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="property1"
+		class="ValueInjectionTraining.Classes.ValueBean">
+		<property name="i" value="0" />
+		<property name="j" value="1" />
+		<property name="d" value="3.14" />
+		<property name="b" value="true" />
+		<property name="s1" value="Selam" />
+		<property name="s2" value="Hello" />
+		<property name="list">
+			<list>
+				<value>I</value>
+				<value>love</value>
+				<value>Spring</value>
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>1</value>
+				<value>2</value>
+				<value>3</value>
+			</set>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="1" value="bir" />
+				<entry key="10" value="on" />
+				<entry key="100" value="yuz" />
+			</map>
+		</property>
+	</bean>
+</beans>
