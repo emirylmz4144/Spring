@@ -16,6 +16,6 @@ public class Test {
 		System.out.println(calculator.doCalculation("log", 2.71828));
 		System.out.println(calculator.doCalculation("sqrt",100));
 
-		
+
 	}
 }
