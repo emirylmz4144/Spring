@@ -18,4 +18,53 @@
         <property name="connectionString" value="--Bağlantı--"/>
     </bean>
 
+    <!--
+    Buradakiler constructor injection çeşitleridir
+
+    <bean id="renderer1" class="tandardOutputRenderer">
+        <constructor-arg name="greetingProvider" ref="helloProvider" />
+    </bean>
+
+
+    <bean id="helloProvider" name="hello_provider" HelloWorldGreetingProvider" />
+
+
+    <bean id="renderer2" class="StandardOutputRenderer">
+        <constructor-arg name="greetingProvider">
+            <ref bean="hello_provider" />
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="renderer3" class="ErrorOutputRenderer">
+        <property name="greetingProvider" ref="selam_provider" />
+    </bean>
+
+
+    <bean id="selamProvider" class="SelamGreetingProvider">
+        <property name="greeting" value="Selaaaammm :)" />
+    </bean>
+
+
+    <alias name="selamProvider" alias="selam_provider" />
+
+
+    <bean id="renderer4" class="StandardOutputRenderer">
+        <constructor-arg name="greetingProvider">
+            <bean class="SelamGreetingProvider">
+                    <property name="greeting" value="Selam Millet :)" />
+            </bean>
+        </constructor-arg>
+     </bean>
+
+
+    <bean id="renderer5" class="StandardOutputRenderer">
+    <constructor-arg name="greetingProvider">
+        <null/>
+    </constructor-arg>
+    </bean>
+
+
+    -->
+
 </beans>

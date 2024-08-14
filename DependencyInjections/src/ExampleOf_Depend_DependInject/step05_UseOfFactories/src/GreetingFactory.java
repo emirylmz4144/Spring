@@ -14,7 +14,7 @@ public class GreetingFactory implements Factory{
 			props.load(new FileInputStream("src/resources/application.properties"));
 			// Get the name of the implementation classes
 
-			
+
 			String rendererClass = props.getProperty("renderer.class");
 			String providerClass = props.getProperty("provider.class");
 			// Create object instances of MessageRenderer and MessageProvider
