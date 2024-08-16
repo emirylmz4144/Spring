@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+
+	<bean id="standardOutputRenderer"
+		class="renderer.StandardOutputRenderer" />
+
+	<bean id="errorOutputRenderer"
+		class="renderer.ErrorOutputRenderer" />
+
+
+	<bean id="selamProvider"
+		class="provider.SelamGreetingProvider">
+		<qualifier value="selam"/>
+	</bean>
+
+	<bean id="helloProvider"
+		class="provider.HelloWorldGreetingProvider">
+		<qualifier value="hello"/>
+	</bean>
+
+</beans>
