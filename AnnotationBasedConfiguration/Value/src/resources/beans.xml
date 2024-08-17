@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- enable the usage of annotations -->
+	<context:component-scan base-package="resources Classes" />
+
+	<!--Böylece value injection beanlere yapılabilir-->
+
+<!--
+Böylece property dosyalarının yolunu xmle bildirebilirsin
+<context:property-placeholder location="classpath:resources/bean.properties" />
+-->
+
+
+<!--
+Birden fazla property dosyası xmlde tanımlanabilir
+
+<context:property-placeholder
+	location="classpath:org/javaturk/spring/di/ch06/value/resources/app.properties,
+	  		classpath:org/javaturk/spring/di/ch06/value/resources/bean.properties" />
+	  		-->
+
+</beans>
