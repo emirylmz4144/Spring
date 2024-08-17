@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * Run with -DmyDesktop=/Users/akin/Desktops to pass param to @PropertySource in ValueBean.java.
  * Run with -DpathToResources=org/javaturk/spring/di/ch06/value/resources to pass param to XML file.
- * @author akin
+ * @author emir
  *
  */
 public class ValueExample {
